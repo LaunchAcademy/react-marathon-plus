@@ -10,7 +10,7 @@ From your challenges directory, run the following:
 et get react-marathon-plus
 cd react-marathon-plus
 yarn install
-yarn run start
+yarn run dev:client
 ```
 
 ## Instructions
@@ -132,6 +132,12 @@ Things to keep in mind:
 - You will need a way to _change_ the currently selected playlist.
 - Each list item should have the power to update the record of the currently selected playlist with the proper id via an event listener.
 
+Implement state, and `onClick` functionality, such that the id of the selected playlist is being tracked. By the end of this step, you should be able to `console.log` the selected playlist's id, and see it changing in your console.
+
+### Step 7.0
+
+Now that we're tracking the selected playlist's id in our state, let's make that change in state visible on the page!
+
 A classname has been provided for you for styling.
 
 ```css
@@ -141,13 +147,15 @@ A classname has been provided for you for styling.
 }
 ```
 
-By the end of this step, your app should respond to clicking on a given playlist element, such that one playlist is highlighted at a time
+Find a way to implement logic such that this styling is only applied to the selected playlist.
+
+By the end of this step, your app should respond to clicking on a given playlist element, such that one playlist is highlighted at a time.
 
 - By the end your screen should look something like this:
 
 ![React Marathon Updated Step 6](https://horizon-production.s3.amazonaws.com/images/challenge/react-marathon-plus/updated-step-6.png)
 
-### Step 7.0
+### Step 8.0
 
 Now on to the "Songs" section of the app!
 
@@ -156,14 +164,6 @@ Now on to the "Songs" section of the app!
 - Have this component render an h1 tag with the text `"Songs"`
 
 - Ensure that only the data regarding songs is passed down to this component.
-
-- We should have new component file and see the text "Songs" on the screen, in addition to our work for playlists.
-
-- By the end your screen should look something like this:
-
-![React Marathon Updated Step 7](https://horizon-production.s3.amazonaws.com/images/challenge/react-marathon-plus/updated-step-7.png)
-
-### Step 8.0
 
 We already know based on our tree diagram that our `SongCollection` component will eventually be responsible for creating various `Song` components, and will likely maintain selected song state. But we will need a smaller stateless component that is responsible for displaying the song name and artist information on the screen.
 
