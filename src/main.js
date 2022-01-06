@@ -1,9 +1,11 @@
 import './main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+
+import App from './components/App.js';
+import data from './constants/data.js'
 
 ReactDOM.render(
-  <App />,
+  <App data={data}/>,
   document.getElementById('app')
 );
